@@ -1,2 +1,2 @@
 # express-api-boiler
-example code for an express api
+example of an express api
