@@ -1,24 +1,27 @@
 {
-  "name": "express-api-boiler",
+  "name": "mern-boiler-plate",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server.js",
-    "watch": "nodemon",
-    "seed": "node seeders/seed.js"
+    "start": "node server/server.js --ignore client",
+    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelfox1/mern-boiler-plate.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^5.0.0",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.9"
+  "bugs": {
+    "url": "https://github.com/samuelfox1/mern-boiler-plate/issues"
   },
+  "homepage": "https://github.com/samuelfox1/mern-boiler-plate#readme",
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "concurrently": "^5.3.0"
   }
 }
