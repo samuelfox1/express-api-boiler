@@ -1,1 +1,1 @@
-# Mern-stack boiler plate
+# mern-boiler-plate
